@@ -1,0 +1,7 @@
+name: KookMC
+version: '${version}'
+main: org.encinet.kookmc.KookMC
+api-version: 1.19
+authors: [ Aeolic, ObcbO ]
+description: Minecraft with Kook
+website: https://github.com/encinet/
