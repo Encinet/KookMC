@@ -70,7 +70,7 @@ class Command {
         }
         bannedPlayers = bannedPlayers.stream().sorted().collect(Collectors.toList())
         val num: Int = bannedPlayers.size
-        val message = "当前 $num 人被封禁 \n${java.lang.String.join("\n", bannedPlayers)}"
+        val message = "当前 $num 人被封禁 +\n${java.lang.String.join("\n", bannedPlayers)}"
         msg.send(message)
     }
 }

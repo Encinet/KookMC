@@ -24,10 +24,10 @@ class KookMC : JavaPlugin() {
         Config.load(this.config)
         logger.info("登录机器人...")
         Core("1/MTAyOTQ=/os0GdVRlHLCiUEMIZWuxRA==").register()
-        logger.info("[KookMC]插件启动成功")
+        logger.info("插件启动成功")
     }
 
     override fun onDisable() {
-        logger.info("[KookMC]插件卸载成功")
+        logger.info("插件卸载成功")
     }
 }
