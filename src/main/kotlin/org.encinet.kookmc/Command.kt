@@ -1,7 +1,9 @@
 package org.encinet.kookmc
 
 import com.github.hank9999.kook.Bot
+import com.github.hank9999.kook.http.kookapis.Channel
 import com.github.hank9999.kook.types.Message
+import io.javalin.plugin.bundled.RouteOverviewUtil.metaInfo
 import net.kyori.adventure.text.Component
 import net.kyori.adventure.text.TextComponent
 import net.kyori.adventure.text.event.ClickEvent
@@ -14,27 +16,22 @@ import java.util.concurrent.ThreadLocalRandom
 import java.util.stream.Collectors
 
 class Command {
-    @Bot.OnCommand("你在吗")
-    suspend fun test(msg: Message) {
-        msg.send("我在呢~")
-    }
-
     @Bot.OnCommand("send", aliases = ["发送"])
-    suspend fun send(msg: Message, content: String) {
-        val sender: String = msg.authorId
+    suspend fun send(msg: Message) {
+        val senderName: String = msg.extra.author.nickname
         val df: DateFormat = DateFormat.getDateInstance()
         // 时间格式化后的文本
         val time: String = df.format(Date(System.currentTimeMillis()))
         val textComponent: TextComponent = Component.text("")
-            .append(Component.text("§8[§eKOOK§8]").hoverEvent(
+            .append(Component.text("§8[§aKOOK§8]").hoverEvent(
                 HoverEvent.showText(Component.text("""
                                                 §8| §b这是一条从KOOK发来的消息
                                                 §8| §b使用#可互通
                                                 §a➥ §b点击回复""")))
                 .clickEvent(ClickEvent.suggestCommand("#")))
-            .append(Component.text(sender).color(NamedTextColor.DARK_RED))
+            .append(Component.text(senderName).color(NamedTextColor.DARK_RED))
             .append(Component.text(": ").color(NamedTextColor.GRAY))
-            .append(Component.text(content).hoverEvent(HoverEvent.showText(Component.text("Time $time"))))
+            .append(Component.text(msg.content).hoverEvent(HoverEvent.showText(Component.text("Time $time"))))
         Bukkit.getServer().sendMessage(textComponent)
     }
 

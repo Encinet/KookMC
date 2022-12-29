@@ -23,7 +23,7 @@ class KookMC : JavaPlugin() {
         this.reloadConfig()
         Config.load(this.config)
         logger.info("登录机器人...")
-        Core("1/MTAyOTQ=/os0GdVRlHLCiUEMIZWuxRA==").register()
+        Core("1/MTAyOTQ=/I/CpQpX0RC5QVfLVViKrUw==").register()
         logger.info("插件启动成功")
     }
 
