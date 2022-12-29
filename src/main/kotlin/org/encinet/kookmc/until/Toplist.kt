@@ -34,7 +34,7 @@ abstract class Toplist {
         sb.append(topText).append(" ").append(page).append("/").append(maxPage).append("\n")
         if (page > maxPage) return sb.append("无").toString()
         var num = 1
-        for ((key, value) in Map.Entry<Int, String?> in online) {
+        for ((key, value) in online) {
             if (num in start..end) {
                 sb.append(num).append(".").append(value).append(" - ").append(tl.unit(key)).append("\n")
             } else if (num > end) break
