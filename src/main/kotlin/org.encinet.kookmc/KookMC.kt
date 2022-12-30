@@ -3,6 +3,9 @@ package org.encinet.kookmc
 import org.bukkit.plugin.java.JavaPlugin
 
 class KookMC : JavaPlugin() {
+    companion object {
+        lateinit var core: Core
+    }
     override fun onEnable() {
         logger.fine(
             """
@@ -18,12 +21,14 @@ class KookMC : JavaPlugin() {
         """.trimIndent()
         )
 
-        logger.info("插件开始启动")
         logger.info("加载Config...")
         this.reloadConfig()
         Config.load(this.config)
+
         logger.info("登录机器人...")
-        Core("1/MTAyOTQ=/I/CpQpX0RC5QVfLVViKrUw==").register()
+        core = Core("1/MTAyOTQ=/I/CpQpX0RC5QVfLVViKrUw==")
+        core.register()
+
         logger.info("插件启动成功")
     }
 
