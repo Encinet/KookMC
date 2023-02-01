@@ -21,3 +21,4 @@ dependencies {
 application {
     mainClass.set("org.encinet.kookmc.KookMC")
 }
+

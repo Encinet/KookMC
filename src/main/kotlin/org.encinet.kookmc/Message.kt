@@ -1,8 +1,8 @@
 package org.encinet.kookmc
 
+import com.github.hank9999.kook.Bot.Companion.kookApi
 import com.github.hank9999.kook.types.Message
 import io.papermc.paper.event.player.AsyncChatEvent
-import kotlinx.coroutines.CoroutineScope
 import net.kyori.adventure.text.Component
 import net.kyori.adventure.text.TextComponent
 import net.kyori.adventure.text.event.ClickEvent
@@ -18,13 +18,18 @@ import java.util.*
 class Message : Listener {
     @EventHandler
     suspend fun game(e: AsyncChatEvent) {
+        val msg: Component = e.message()
         val player: Player = e.player
-        player.name + ": " + e.message()
+        if (msg.toString().first() == '#') {
+            val message = player.name + ": " + e.message()
+            val sendMessage = message.substring(0, message.length - 1)
+            kookApi.message.create("9965437406459150", sendMessage)
+        }
     }
 
     companion object {
-        fun channel(msg: Message, cs: CoroutineScope) {
-            val extra: Message.Extra = msg.extra;
+        fun channel(msg: Message) {
+            val extra: Message.Extra = msg.extra
             val senderName: String = extra.author.nickname
 
             if (extra.channelName.equals("游戏聊天互通")) {

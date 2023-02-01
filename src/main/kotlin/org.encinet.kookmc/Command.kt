@@ -1,6 +1,7 @@
 package org.encinet.kookmc
 
 import com.github.hank9999.kook.Bot
+import com.github.hank9999.kook.Bot.Companion.kookApi
 import com.github.hank9999.kook.types.Message
 import net.kyori.adventure.text.Component
 import net.kyori.adventure.text.TextComponent
@@ -21,6 +22,7 @@ import java.util.stream.Collectors
 class Command {
     @Bot.OnCommand("list", aliases = ["在线"])
     suspend fun list(msg: Message) {
+
         var message: String
         // 添加玩家id列表
         var onlinePlayers: MutableList<String> = ArrayList()

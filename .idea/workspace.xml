@@ -5,13 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="615d8082-c011-4a66-b681-1029cb1dbee3" name="变更" comment="修复">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org.encinet.kookmc/Message.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/encinet/kookmc/until/NumProcess.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/kotlinScripting.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/org.encinet.kookmc/Command.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org.encinet.kookmc/Command.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/org.encinet.kookmc/Core.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org.encinet.kookmc/Core.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/org.encinet.kookmc/KookMC.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org.encinet.kookmc/KookMC.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org.encinet.kookmc/Message.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org.encinet.kookmc/Message.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,8 +50,12 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="KookMC" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="shadow" type="c8890929:TasksNode$1" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="KookMC" type="f1a62948:ProjectNode" />
+                <item name="运行配置" type="7b0102dc:RunConfigurationsNode" />
               </path>
             </expand>
             <select />
@@ -99,7 +103,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/KOOKMC/KookMC&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/codes/KOOKMC/KookMC&quot;,
     &quot;project.structure.last.edited&quot;: &quot;工件&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
@@ -136,12 +140,33 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="KookMC [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="KookMC [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="KookMC [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -162,7 +187,7 @@
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -178,15 +203,29 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Gradle.KookMC [clean]" />
+      <item itemvalue="Gradle.KookMC [build]" />
+      <item itemvalue="Gradle.KookMC [jar]" />
+      <item itemvalue="Gradle.KookMC [shadowJar]" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.KookMC [shadowJar]" />
+        <item itemvalue="Gradle.KookMC [clean]" />
         <item itemvalue="Gradle.KookMC [build]" />
         <item itemvalue="Gradle.KookMC [jar]" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="StandaloneScriptsStorage">
+    <option name="files">
+      <set>
+        <option value="$PROJECT_DIR$/build.gradle.kts" />
+      </set>
+    </option>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="默认任务">
       <changelist id="615d8082-c011-4a66-b681-1029cb1dbee3" name="变更" comment="" />
