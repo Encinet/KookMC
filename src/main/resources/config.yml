@@ -1,3 +1,7 @@
+# 机器人token 开发者平台可以找到
+bot-token: ""
+
+# num:服务器在线人数 text:随机提示信息
 NumMessage:
   - num: 0
     text:
@@ -11,3 +15,7 @@ NumMessage:
   - num: 2
     text:
       - "{0} 和 {1} 正在体验二人世界"
+
+#频道ID列表 KOOK右键频道可以获取
+targetID:
+  - ""

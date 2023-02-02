@@ -44,7 +44,6 @@ class Command {
         }
         msg.send(message)
     }
-
     @Bot.OnCommand("banlist", aliases = ["封禁"])
     suspend fun banlist(msg: Message) {
         var bannedPlayers: MutableList<String> = ArrayList()
@@ -90,30 +89,4 @@ class Command {
 
         msg.send(sb.toString())
     }
-
-//    @Bot.OnCommand("ot", aliases = ["在线排行榜"])
-//    suspend fun ot(msg: Message) {
-//        val str: List<String> = msg.content.split(" ")
-//        val page: Int = try {
-//            if (str.size > 1) str[1].toInt().coerceAtLeast(1) else 1
-//        } catch (e: NumberFormatException) {
-//            1
-//        }
-//        msg.send(TopList.get(Statistic.PLAY_ONE_MINUTE, object : TopList() {
-//            fun unit(num: Int): String? {
-//                return Process.ticksToText(num)
-//            }
-//        }, "在线排行榜", page))
-//        // 以下涉及绑定
-//        val uuid: UUID = Whitelist.getBind(qqNum)
-//        if (uuid != null) {
-//            val oPlayer: OfflinePlayer? = Bukkit.getPlayer(uuid)
-//            if (oPlayer != null) {
-//                val name = Objects.requireNonNull(oPlayer.name)
-//                if (rText.contains(name)) {
-//                    rText = rText.replace(name, "$name[你]")
-//                }
-//            }
-//        }
-//    }
 }

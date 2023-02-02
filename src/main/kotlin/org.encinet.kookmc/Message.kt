@@ -23,7 +23,10 @@ class Message : Listener {
         if (msg.toString().first() == '#') {
             val message = player.name + ": " + e.message()
             val sendMessage = message.substring(0, message.length - 1)
-            kookApi.message.create("9965437406459150", sendMessage)
+            for (send in Config.targetID) {
+                kookApi.message.create(send, sendMessage)
+            }
+
         }
     }
 

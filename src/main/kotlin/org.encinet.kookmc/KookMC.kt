@@ -26,10 +26,13 @@ class KookMC : JavaPlugin() {
         Config.load(this.config)
 
         logger.info("登录机器人...")
-        core = Core("1/MTAyOTQ=/I/CpQpX0RC5QVfLVViKrUw==")
-        core.register()
-
-        logger.info("插件启动成功")
+        if (Config.token != null) {
+            core = Core(Config.token)
+            core.register()
+            logger.info("插件启动成功")
+        } else {
+            logger.warning("请检查是否填入机器人token!")
+        }
     }
 
     override fun onDisable() {

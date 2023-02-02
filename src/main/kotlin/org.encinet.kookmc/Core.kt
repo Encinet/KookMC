@@ -8,10 +8,10 @@ class Core(token: String) {
 
     fun register() {
         bot.registerClass(Command())
-        bot.registerMessageFunc { msg, cs -> Message.channel(msg, cs) }
+        bot.registerMessageFunc { msg, _ -> Message.channel(msg) }
     }
 
     fun getBot() : Bot {
-        return bot;
+        return bot
     }
 }
