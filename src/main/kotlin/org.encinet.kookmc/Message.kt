@@ -17,17 +17,28 @@ import java.util.*
 
 class Message : Listener {
     @EventHandler
+    //捏妈的，写个这玩意儿把我CPU干烧了
     suspend fun game(e: AsyncChatEvent) {
+        val player: Player = e.player
         val msg: Component = e.message()
+        if (msg.toString().first() == '#') {
+            var msg1 = msg.toString()
+            msg1 = msg1.substring(1)
+            val message = player.name + ": " + msg1
+            for (sendTarget in Config.targetID) {
+                kookApi.message.create(sendTarget, message)
+            }
+        }
+        /*val msg: Component = e.message()
         val player: Player = e.player
         if (msg.toString().first() == '#') {
             val message = player.name + ": " + e.message()
             val sendMessage = message.substring(0, message.length - 1)
-            for (send in Config.targetID) {
-                kookApi.message.create(send, sendMessage)
+            for (sendTarget in Config.targetID) {
+                kookApi.message.create(sendTarget, sendMessage)
             }
 
-        }
+        }*/
     }
 
     companion object {
@@ -35,7 +46,7 @@ class Message : Listener {
             val extra: Message.Extra = msg.extra
             val senderName: String = extra.author.nickname
 
-            if (extra.channelName.equals("游戏聊天互通")) {
+            if (extra.channelName == "游戏聊天互通") {
                 val df: DateFormat = DateFormat.getDateInstance()
                 // 时间格式化后的文本
                 val time: String = df.format(Date(System.currentTimeMillis()))

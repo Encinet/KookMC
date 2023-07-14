@@ -14,8 +14,9 @@ repositories {
 }
 
 dependencies {
-    compileOnly("org.purpurmc.purpur:purpur-api:1.19.3-R0.1-SNAPSHOT")
+    compileOnly("org.purpurmc.purpur:purpur-api:1.20.1-R0.1-SNAPSHOT")
     implementation("com.github.hank9999:kook-kt:0.0.4")
+    implementation("org.yaml:snakeyaml:1.29")
 }
 
 application {

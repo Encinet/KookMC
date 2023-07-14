@@ -1,4 +1,4 @@
-package org.encinet.kookmc.until
+package org.encinet.kookmc.util
 
 import java.text.DecimalFormat
 

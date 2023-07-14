@@ -1,25 +1,27 @@
 package org.encinet.kookmc
 
 import com.github.hank9999.kook.Bot
-import com.github.hank9999.kook.Bot.Companion.kookApi
 import com.github.hank9999.kook.types.Message
-import net.kyori.adventure.text.Component
-import net.kyori.adventure.text.TextComponent
-import net.kyori.adventure.text.event.ClickEvent
-import net.kyori.adventure.text.event.HoverEvent
-import net.kyori.adventure.text.format.NamedTextColor
 import org.bukkit.Bukkit
-import org.bukkit.Statistic
-import org.encinet.kookmc.until.NumProcess
-import org.encinet.kookmc.until.Toplist
-import java.text.DateFormat
+import org.bukkit.plugin.java.JavaPlugin
+import org.encinet.kookmc.util.NumProcess
+import org.yaml.snakeyaml.Yaml
+import java.io.File
+import java.io.FileWriter
 import java.text.DecimalFormat
 import java.util.*
 import java.util.concurrent.ThreadLocalRandom
 import java.util.stream.Collectors
 
 
-class Command {
+class Command : JavaPlugin() {
+    @Bot.OnCommand("bind", aliases = ["绑定"])
+    suspend fun bind(msg: Message) {
+        val msg1 = msg.toString()
+        val args = msg1.split(" ")
+        val value = args[1]
+    }
+
     @Bot.OnCommand("list", aliases = ["在线"])
     suspend fun list(msg: Message) {
 
@@ -89,4 +91,8 @@ class Command {
 
         msg.send(sb.toString())
     }
+
+
+
+
 }

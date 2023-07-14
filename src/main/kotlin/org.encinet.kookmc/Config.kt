@@ -7,6 +7,7 @@ class Config() {
         var numMessage: MutableMap<Int, List<String>> = HashMap()
         lateinit var targetID: List<String>
         lateinit var token: String
+
         fun load(config: FileConfiguration) {
             token = config.getString("token").toString()
             targetID = config.getStringList("targetID")
